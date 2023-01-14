@@ -7,10 +7,10 @@ function Hero() {
   return (
     <div>
       <section id='home'
-  class="relative bg-[url(/411.jpg)] bg-cover bg-center bg-no-repeat"
+  className="relative bg-[url(/411.jpg)] bg-cover bg-center bg-no-repeat"
 >
   <div
-    class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center"
+    className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center"
   >
     {/* <div class="mx-auto max-w-3xl text-center">
       
@@ -52,9 +52,9 @@ function Hero() {
     </div>
   </div>*/}
   <div
-    class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
+    className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
   >
-    <div class=" rounded-xl p-5 mt-14 max-w-xl font-sora text-center sm:text-left hover:shadow-lg hover:transition-all hover:bg-cultured/25">
+    <div className=" rounded-xl p-5 mt-14 max-w-xl font-sora text-center sm:text-left hover:shadow-lg hover:transition-all hover:bg-cultured/25">
       {/*<h1 class="text-3xl font-extrabold sm:text-5xl">
         Luxury & Comfort
 
@@ -63,28 +63,28 @@ function Hero() {
         </strong>
       </h1>
       <h6 className='font-semibold text-left'>Since 2005</h6>*/}
-      <img src="Title.svg" alt="Company Title" />
-      <p class="text-justify font-semibold text-oxford-blue mt-4 max-w-lg sm:text-xl sm:leading-relaxed">
+      <Image src="Title.svg" alt="Company Title" width={500} height={500}/>
+      <p className="text-justify font-semibold text-oxford-blue mt-4 max-w-lg sm:text-xl sm:leading-relaxed">
       Experience the luxury of premium quality with IGI. The trusted source for hotels and home utility linen made with world class fabrics
       </p>
 
-      <div class="mt-5 flex flex-wrap gap-4 text-center">
+      <div className="mt-5 flex flex-wrap gap-4 text-center">
       <a
-        class="inline-block rounded-full bg-platinum p-[2px] hover:bg-crayola focus:outline-none focus:ring transition-all"
+        className="inline-block rounded-full bg-platinum p-[2px] hover:bg-crayola focus:outline-none focus:ring transition-all"
         href="#product"
       >
         <span
-          class="block rounded-full text-platinum bg-rhythm bg-no-repeat px-8 py-3 text-sm font-normal hover:bg-oxford-blue hover:text-crayola"
+          className="block rounded-full text-platinum bg-rhythm bg-no-repeat px-8 py-3 text-sm font-normal hover:bg-oxford-blue hover:text-crayola"
         >
           Our Products
         </span>
       </a>
       <a
-        class="inline-block rounded-full bg-oxford-blue p-[2px] hover:bg-crayola focus:outline-none focus:ring transition-all"
+        className="inline-block rounded-full bg-oxford-blue p-[2px] hover:bg-crayola focus:outline-none focus:ring transition-all"
         href="#contact"
       >
         <span
-          class="block rounded-full bg-platinum text-oxford-blue px-8 py-3 text-sm font-normal hover:text-crayola hover:bg-oxford-blue"
+          className="block rounded-full bg-platinum text-oxford-blue px-8 py-3 text-sm font-normal hover:text-crayola hover:bg-oxford-blue"
         >
           Contact Us
         </span>
