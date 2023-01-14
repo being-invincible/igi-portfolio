@@ -7,10 +7,10 @@ function Hero() {
   return (
     <div>
       <section id='home'
-  className="relative bg-[url(/411.jpg)] bg-cover bg-center bg-no-repeat"
+  className="relative bg-[url(/411.jpg)] bg-cover bg-center bg-no-repeat h-screen"
 >
   <div
-    className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center"
+    className="mx-auto max-w-screen-xl px-4 py-32 lg:flex  lg:h-screen lg:items-center"
   >
     {/* <div class="mx-auto max-w-3xl text-center">
       
@@ -54,7 +54,7 @@ function Hero() {
   <div
     className="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8"
   >
-    <div className=" rounded-xl p-5 mt-14 max-w-xl font-sora text-center sm:text-left hover:shadow-lg hover:transition-all hover:bg-cultured/25">
+    <div className=" rounded-xl p-5 mt-14 max-w-xl font-sora text-center sm:text-left hover:shadow-lg hover:transition-all hover:bg-cultured/50">
       {/*<h1 class="text-3xl font-extrabold sm:text-5xl">
         Luxury & Comfort
 

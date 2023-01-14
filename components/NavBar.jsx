@@ -9,7 +9,7 @@ function NavBar() {
       <nav className="w-full bg-oxford-blue fixed top-0 left-0 right-0 z-10">
         <div className="justify-between px-10 mx-auto md:items-center md:flex">
           <div>
-            <div className="flex content-center items-center justify-between py-3 md:py-4 md:block">
+            <div className="flex content-center items-center justify-between py-2 md:py-3 md:block">
               {/* LOGO */}
               <Link className='flex' href="/">
                 <img src="/Logo.png" className="inline" width={60} alt="" />

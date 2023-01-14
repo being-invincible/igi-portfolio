@@ -9,7 +9,7 @@ function About() {
   
   <section id='about' className=''>
   
-    <div class="h-screen py-32 px-10 grid grid-cols-1 gap-4 md:grid-cols-2 bg-platinum">
+    <div class="h-screen pt-20 lg:py-32 px-10 grid grid-cols-1 gap-4 md:grid-cols-2 bg-platinum">
       <div class="bg-gradient-to-tl from-mountain-pink to-rhythm p-8 md:p-8 lg:px-16 lg:py-8">
         <div class="mx-auto font-sora max-w-xl">
           <h2 class="text-2xl font-sora font-bold text-platinum md:text-3xl">

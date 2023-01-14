@@ -175,7 +175,7 @@ function Products() {
                 </div>
                      
                 </div> 
-                <p class="mt-8 font-normal text-platinum lg:mb-4 sm:text-xl dark:text-gray-400">
+                <p class="mt-4 font-normal font-sora text-platinum lg:mb-4 sm:text-xl dark:text-gray-400">
                 <b>Note : </b> Custom made color & sizes available on request 
                 </p> 
           </div>
