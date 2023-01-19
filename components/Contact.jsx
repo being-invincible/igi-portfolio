@@ -49,12 +49,12 @@ function Contact({contact, contact_des, mail_des, send_button}) {
           <div class="space-y-5">
           <a
             class="inline-block rounded-full bg-platinum p-[2px] hover:bg-crayola focus:outline-none focus:ring transition-all"
-            href="tel:+96502056978"
+            href="tel:+966502056978"
           >
             <span
               class="block rounded-full text-platinum bg-rhythm bg-no-repeat px-8 py-3 text-md font-normal hover:bg-oxford-blue hover:text-crayola"
             >
-              +96502056978 || +96659527889
+              +966502056978 || +96659527889
             </span>
           </a>
           <a class=" text-2xl font-bold text-crayola">
