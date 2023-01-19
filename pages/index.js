@@ -1,19 +1,21 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from '../styles/Home.module.css'
 import NavBar from '../components/NavBar'
-import LandingPage from '../components/LandingPage'
 import Hero from '../components/Hero'
 import Contact from '../components/Contact'
-
 import Products from '../components/Products'
 import About from '../components/About'
 import Features from '../components/Features'
 
+import { useTranslations } from 'next-intl'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  
+  const t= useTranslations('home')
+  
   return (
     <>
       <Head>
@@ -23,21 +25,29 @@ export default function Home() {
         <link rel="icon" href="/Logo.png" />
       </Head>
       <main className=''>
+      
       <NavBar />
-      <Hero />
-      <About />
-      <Features />
-      <Products />
-      <Contact />
+      
+      <Hero slogan={t("slogan")} button01={t("hero_button01")} button02={t("hero_button02")} />
+      <About title={t("about")} para01={t("about_para01")} para02={t("about_para02")} button01={t("about_button")} />
+      <Features title={t("feature_title")} subtitle={t("feature_subtitle")} para01={t("feature_para01")} feature01={t("feature_point01")} feature02={t("feature_point02")} feature03={t("feature_point03")} tag={t("tag")} msg={t("msg")} />
+      <Products product={t("product")} product_para={t("product_para")} sizes={t("sizes")} note={t("note")} 
+      p1={t("p1")} p1_des={t("p1_des")}
+      p2={t("p2")} p2_des={t("p2_des")}
+      p3={t("p3")} p3_des={t("p3_des")}
+      p4={t("p4")} p4_des={t("p4_des")}
+      p5={t("p5")} p5_des={t("p5_des")}
+      p6={t("p6")} p6_des={t("p6_des")}
+      />
+      <Contact contact={t("contact")} contact_des={t("contact_des")} mail_des={t("mail_des")} send_button={t("send_button")} />
 
-      <footer id="#Footer"class="p-4 bg-platinum sm:p-6 dark:bg-gray-800">
-          <div class="mx-auto max-h-screen max-w-screen-xl">
+      <footer id="#Footer"class=" p-4 bg-platinum sm:p-6 dark:bg-gray-800">
+          <div class="mx-8 mb-0 max-h-screen max-w-screen-xl">
               
               <hr class="my-6 border-smoky-black/75 sm:mx-auto lg:my-8" />
               <div class="sm:flex text-smoky-black sm:items-center sm:justify-between">
-                  <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#home" class="hover:underline">Imran Guld Industries. F. Co.</a> - All Rights Reserved.
-                  </span>
-                  <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
+                  
+                  {/*<div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
                       <a  class="text-gray-500 hover:text-gray-900 dark:hover:text-white">
                           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
                       </a>
@@ -48,12 +58,26 @@ export default function Home() {
                           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" /></svg>
                       </a>
                       
-                  </div>
+                  </div>*/}
+                  <div class="items-end bottom-0 right-0">
+                    <img className='w-20' src="logo_footer.jpg" alt=""/>
+                </div>
+                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#home" class="hover:underline">Imran Gulf Industries. F. Co.</a> - All Rights Reserved.
+                  </span>
               </div>
+              
           </div>
       </footer>
 
       </main>
     </>
   )
+}
+
+export function getStaticProps({locale}) {
+  return {
+    props: {
+      messages: require(`../lang/${locale}.json`)
+    }
+  }
 }

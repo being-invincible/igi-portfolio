@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Input from './input.tsx';
 import Textarea from './textarea';
 
-function Contact() {
+function Contact({contact, contact_des, mail_des, send_button}) {
   const [navbar, setNavbar] = useState(false);
   async function handleOnSubmit(e) {
     e.preventDefault();
@@ -35,15 +35,15 @@ function Contact() {
   -->*/}
 
 <section id='contact' class="bg-platinum">
-  <div class="mx-auto max-w-screen-xl px-10 pt-10 lg:py-20 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-screen-xl px-10 pt-10 lg:py-20 sm:px-6 lg:px-0">
     <div class="grid grid-cols-1 gap-x-16 gap-y-8 lg:grid-cols-5">
       <div class="lg:col-span-2 space-y-5 lg:py-12">
           <h2 class="text-2xl font-sora font-bold text-oxford-blue md:text-3xl">
-            Contact us
+            {contact}
           </h2>
         
         <p class="max-w-xl font-normal text-md font-sora text-justify text-oxford-blue">
-        Our team of experts are dedicated to providing personalized service and expert guidance to help you make the best selection for your needs
+        {contact_des}
         </p>
 
           <div class="space-y-5">
@@ -79,7 +79,7 @@ function Contact() {
 
       <div class="bg-gradient-to-tl from-mountain-pink to-rhythm p-8 shadow-lg lg:col-span-3 lg:p-12">
         <h4 class="mb-5 text-2xl font-sora font-bold text-cultured md:text-3xl">
-          Drop us a mail!
+          {mail_des}
         </h4>
         <form method='post' onSubmit={handleOnSubmit} class="space-y-4">
           <Input  id="name" name="name" label="Name" type="text" placeholder="Name"/>
@@ -100,7 +100,7 @@ function Contact() {
               class="inline-flex w-full items-center justify-center rounded-full bg-platinum text-oxford-blue border-2 border-oxford-blue hover:text-crayola px-5 py-3 text-white sm:w-auto hover:bg-oxford-blue active:border-2 active:border-crayola
               "
             >
-              <span class="font-sora  font-semibold"> Send Enquiry </span>
+              <span class="font-sora  font-semibold">{send_button}</span>
 
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -1,20 +1,20 @@
 import { useEffect, useState } from 'react';
 
-function Products() {
+function Products({product, product_para, sizes, note, p1, p1_des, p2, p2_des, p3, p3_des, p4, p4_des, p5, p5_des, p6, p6_des}) {
   return (
     <div class="flex justify-center items-center lg:flex-row bg-gradient-to-tl from-mountain-pink to-rhythm">
     <section id='product' class="px-10 mt-5 mb-5">
           <div class="py-5 mx-auto max-w-screen-xl lg:py-28 ">
                 <div class="max-w-screen mb-5 font-sora">
                     <h2 class="mb-4 tracking-tight text-2xl font-sora font-bold text-platinum md:text-3xl">
-                        Our Products
+                    {product}
                     </h2>
                     <p class="font-normal text-platinum lg:mb-5 sm:text-xl dark:text-gray-400">
-                    Welcome to a world of luxurious elegance, softness, and comfort. Indulge in the sumptuousness of <b className='font-bold'>IGI's</b> elegant, cozy and soft linens, curated to elevate your living and sleeping experience.
+                    {product_para}
                     </p>
 
                     <p class="mt-4 font-normal text-platinum lg:mb-4 sm:text-xl dark:text-gray-400">
-                    <b>Sizes : </b> Single, King & Queen
+                    {sizes}
                     </p> 
                 </div> 
                 <div class="grid gap-8 md:grid-cols-3" >
@@ -31,10 +31,10 @@ function Products() {
                             <div
                                 class="font-sora text-cultured p-4 space-y-2 text-xl group-hover:opacity-100 group-hover:translate-y-0 translate-y-4 pb-5 transform transition duration-300 ease-in-out"
                             >
-                                <div class=" font-bold">Bedsheet</div>
+                                <div class=" font-bold">{p1}</div>
 
                                 <div class="text-sm ">
-                                    Bedsheets & Fitted Bedsheets
+                                    {p1_des}
                                 </div>
                             </div>
                         </div>
@@ -56,10 +56,10 @@ function Products() {
                             <div
                                 class="font-sora text-cultured p-4 space-y-2 text-xl group-hover:opacity-100 group-hover:translate-y-0 translate-y-4 pb-5 transform transition duration-300 ease-in-out"
                             >
-                                <div class=" font-bold">Duvet</div>
+                                <div class=" font-bold">{p2}</div>
 
                                 <div class="text-sm ">
-                                    Duvets & Duvet covers
+                                    {p2_des}
                                 </div>
                             </div>
                         </div>
@@ -82,10 +82,10 @@ function Products() {
                             <div
                                 class="font-sora text-cultured p-4 space-y-2 text-xl group-hover:opacity-100 group-hover:translate-y-0 translate-y-4 pb-5 transform transition duration-300 ease-in-out"
                             >
-                                <div class=" font-bold">Bed Runner</div>
+                                <div class=" font-bold">{p3}</div>
 
                                 <div class="text-sm ">
-                                    Bed decors & runners
+                                    {p3_des}
                                 </div>
                             </div>
                         </div>
@@ -108,10 +108,10 @@ function Products() {
                             <div
                                 class="font-sora text-cultured p-4 space-y-2 text-xl group-hover:opacity-100 group-hover:translate-y-0 translate-y-4 pb-5 transform transition duration-300 ease-in-out"
                             >
-                                <div class=" font-bold">Pillow</div>
+                                <div class=" font-bold">{p4}</div>
 
                                 <div class="text-sm ">
-                                    Pillow, protectors & cases
+                                    {p4_des}
                                 </div>
                             </div>
                         </div>
@@ -133,10 +133,10 @@ function Products() {
                             <div
                                 class="font-sora text-cultured p-4 space-y-2 text-xl group-hover:opacity-100 group-hover:translate-y-0 translate-y-4 pb-5 transform transition duration-300 ease-in-out"
                             >
-                                <div class=" font-bold">Mattress Protectors</div>
+                                <div class=" font-bold">{p5}</div>
 
                                 <div class="text-sm ">
-                                    Mattress protectors & mattress encasement protectors
+                                    {p5_des}
                                 </div>
                             </div>
                         </div>
@@ -159,10 +159,10 @@ function Products() {
                             <div
                                 class="font-sora text-cultured p-4 space-y-2 text-xl group-hover:opacity-100 group-hover:translate-y-0 translate-y-4 pb-5 transform transition duration-300 ease-in-out"
                             >
-                                <div class=" font-bold">Bed Skirt</div>
+                                <div class=" font-bold">{p6}</div>
 
                                 <div class="text-sm ">
-                                    Bed skirts
+                                    {p6_des}
                                 </div>
                             </div>
                         </div>
@@ -175,8 +175,8 @@ function Products() {
                 </div>
                      
                 </div> 
-                <p class="mt-4 font-normal font-sora text-platinum lg:mb-4 sm:text-xl dark:text-gray-400">
-                <b>Note : </b> Custom made color & sizes available on request 
+                <p class="mt-8 font-normal font-sora text-platinum lg:mb-4 sm:text-xl dark:text-gray-400">
+                {note} 
                 </p> 
           </div>
         </section>

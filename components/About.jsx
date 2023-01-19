@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
-function About() {
+function About({title, para01, para02, button01}) {
   const [navbar, setNavbar] = useState(false);
   return (
     <div>
@@ -13,11 +13,15 @@ function About() {
       <div class="bg-gradient-to-tl from-mountain-pink to-rhythm p-8 md:p-8 lg:px-16 lg:py-8">
         <div class="mx-auto font-sora max-w-xl">
           <h2 class="text-2xl font-sora font-bold text-platinum md:text-3xl">
-            About us
+            {title}
           </h2>
-          <p className='mt-4 font-medium text-justify text-sm text-platinum sm:mt-4 sm:block'>Imran Gulf Industries F. Co. is a leading provider of tailor-made solutions and premium quality products, founded in Saudi Arabia with a decade-long track record of excellence. We understand the importance of providing our customers with the very best in terms of quality, comfort, and style.</p>
+          <p className='mt-4 font-medium text-justify text-sm text-platinum sm:mt-4 sm:block'>
+          {para01}
+          </p>
 
-          <p class="font-medium text-justify text-sm text-platinum sm:mt-4 sm:block">Our specialization in supplying hotel linens to the hospitality industry and luxury bed linens to discerning households reflects our commitment to meeting the highest standards of elegance, luxury, and beauty. Whether you are a hotelier looking to elevate your guests' experience, or a household with an eye for luxury and comfort, we have the perfect solutions for you.</p>
+          <p class="hidden font-medium text-justify text-sm text-platinum sm:mt-4 sm:block">
+          {para02}
+          </p>
 
           <div class="mt-4 md:mt-6">
           <a
@@ -27,7 +31,7 @@ function About() {
             <span
               class="block rounded-full text-platinum bg-rhythm bg-no-repeat px-8 py-3 text-sm font-bold hover:bg-oxford-blue hover:text-crayola"
             >
-              Why IGI?
+              {button01}
             </span>
           </a>
           </div>
