@@ -13,12 +13,16 @@
     "@heroicons/react": "^2.0.13",
     "@next/font": "13.1.1",
     "@sendgrid/mail": "^7.7.0",
+    "axios": "^1.2.3",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
     "next": "13.1.1",
     "next-intl": "^2.10.2",
+    "nodemailer": "^6.9.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.42.1",
+    "react-icons": "^4.7.1"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",

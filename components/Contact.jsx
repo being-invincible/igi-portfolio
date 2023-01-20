@@ -4,10 +4,13 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Input from './input.tsx';
 import Textarea from './textarea';
+import { useForm } from 'react-hook-form';
 
-function Contact({contact, contact_des, mail_des, send_button}) {
+function Contact({contact, contact_des, mail_des, send_button, call, landmark}) {
   const [navbar, setNavbar] = useState(false);
-  async function handleOnSubmit(e) {
+  const {register, handleSubmit, errors, reset} = useForm()
+
+  async function onFormSubmit(e) {
     e.preventDefault();
     const formData = {}
     Array.from(e.currentTarget.elements).forEach(field =>
@@ -47,28 +50,47 @@ function Contact({contact, contact_des, mail_des, send_button}) {
         </p>
 
           <div class="space-y-5">
+
+          <p class="mt-10 max-w-xl font-bold text-md font-sora text-justify text-oxford-blue">
+          {call}
+          </p>
           <a
             class="inline-block rounded-full bg-platinum p-[2px] hover:bg-crayola focus:outline-none focus:ring transition-all"
             href="tel:+966502056978"
           >
             <span
-              class="block rounded-full text-platinum bg-rhythm bg-no-repeat px-8 py-3 text-md font-normal hover:bg-oxford-blue hover:text-crayola"
+              class="block rounded-full text-platinum bg-rhythm bg-no-repeat px-9 py-3 text-md font-normal hover:bg-oxford-blue hover:text-crayola"
             >
-              +966502056978 || +96659527889
+              +966502056978
             </span>
           </a>
-          <a class=" text-2xl font-bold text-crayola">
-            
+          
+          <a
+            class="ml-5 inline-block rounded-full bg-platinum p-[2px] hover:bg-crayola focus:outline-none focus:ring transition-all"
+            href="tel:+966595278489"
+          >
+            <span
+              class="block rounded-full text-platinum bg-rhythm bg-no-repeat px-9 py-3 text-md font-normal hover:bg-oxford-blue hover:text-crayola"
+            >
+              +966595278489
+            </span>
           </a>
+          
+          <p class="space-x-2 max-w-xl font-bold text-md font-sora text-justify text-oxford-blue">
+          
+          {landmark}
+          
+          </p>
+          
           <a
             class="inline-block rounded-full bg-oxford-blue p-[2px] hover:bg-crayola focus:outline-none focus:ring transition-all"
             href="https://goo.gl/maps/n7Fd76WWjdeNqrhTA"
           >
             
             <span
-              class="block rounded-full bg-platinum text-oxford-blue px-10 py-3 text-md font-bold hover:text-crayola hover:bg-oxford-blue"
+              class="block rounded-full bg-platinum text-oxford-blue px-5 py-3 text-sm font-bold hover:text-crayola hover:bg-oxford-blue"
             >
-              P.O. Box 7306 Riyadh 24326,<br/>
+              P.O. Box 7306 Riyadh 14326,
               Kingdom of Saudi Arabia
             </span>
           </a>
@@ -81,7 +103,7 @@ function Contact({contact, contact_des, mail_des, send_button}) {
         <h4 class="mb-5 text-2xl font-sora font-bold text-cultured md:text-3xl">
           {mail_des}
         </h4>
-        <form method='post' onSubmit={handleOnSubmit} class="space-y-4">
+        <form onSubmit={handleSubmit(onFormSubmit)} class="space-y-4">
           <Input  id="name" name="name" label="Name" type="text" placeholder="Name"/>
 
           <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">

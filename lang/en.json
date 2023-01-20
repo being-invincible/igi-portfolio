@@ -1,5 +1,6 @@
 {
     "home": {
+        "company": "Imran Gulf Industries",
         "slogan": "Experience the luxury of premium quality with IGI. The trusted source for hotels and home utility linen made with world class fabrics",
         "hero_button01": "Our Products",
         "hero_button02": "Contact Us",
@@ -34,6 +35,8 @@
         "contact": "Contact us",
         "contact_des": "Our team of experts are dedicated to providing personalized service and expert guidance to help you make the best selection for your needs",
         "mail_des": "Drop us a mail!",
-        "send_button": "Send Enquiry"
+        "send_button": "Send Enquiry",
+        "call": "Reach us via call -",
+        "landmark": "Our Landmark -"
     }
 }

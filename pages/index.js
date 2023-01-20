@@ -7,7 +7,7 @@ import Contact from '../components/Contact'
 import Products from '../components/Products'
 import About from '../components/About'
 import Features from '../components/Features'
-
+import Lang from '../components/langSwitch'
 import { useTranslations } from 'next-intl'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -28,7 +28,7 @@ export default function Home() {
       
       <NavBar />
       
-      <Hero slogan={t("slogan")} button01={t("hero_button01")} button02={t("hero_button02")} />
+      <Hero slogan={t("slogan")} button01={t("hero_button01")} button02={t("hero_button02")} company={t("company")} />
       <About title={t("about")} para01={t("about_para01")} para02={t("about_para02")} button01={t("about_button")} />
       <Features title={t("feature_title")} subtitle={t("feature_subtitle")} para01={t("feature_para01")} feature01={t("feature_point01")} feature02={t("feature_point02")} feature03={t("feature_point03")} tag={t("tag")} msg={t("msg")} />
       <Products product={t("product")} product_para={t("product_para")} sizes={t("sizes")} note={t("note")} 
@@ -39,7 +39,7 @@ export default function Home() {
       p5={t("p5")} p5_des={t("p5_des")}
       p6={t("p6")} p6_des={t("p6_des")}
       />
-      <Contact contact={t("contact")} contact_des={t("contact_des")} mail_des={t("mail_des")} send_button={t("send_button")} />
+      <Contact contact={t("contact")} contact_des={t("contact_des")} mail_des={t("mail_des")} send_button={t("send_button")} call={t("call")} landmark={t("landmark")} />
 
       <footer id="#Footer"class=" p-4 bg-platinum sm:p-6 dark:bg-gray-800">
           <div class="mx-8 mb-0 max-h-screen max-w-screen-xl">
@@ -60,7 +60,7 @@ export default function Home() {
                       
                   </div>*/}
                   <div class="items-end bottom-0 right-0">
-                    <img className='w-20' src="logo_footer.jpg" alt=""/>
+                    <img className='w-20 mb-5 lg:mb-0' src="logo_footer.jpg" alt=""/>
                 </div>
                 <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#home" class="hover:underline">Imran Gulf Industries. F. Co.</a> - All Rights Reserved.
                   </span>

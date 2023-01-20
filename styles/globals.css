@@ -6,3 +6,8 @@
   font-family: "sora";
   src: url('../public/Sora.ttf');
 }
+
+@font-face {
+  font-family: "lato";
+  src: url('../public/Lato-Bold.ttf');
+}

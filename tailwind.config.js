@@ -23,11 +23,13 @@ module.exports = {
       'orange-web' : '#FCA311',
       'smoky-black' : '#111111',
       'ebony' : '#595A4A',
-      'green' : '#006B3D'
+      'green' : '#006B3D',
+      'goldenrod' : '#D7A122'
     },
     extend: {
       fontFamily: {
         sora: "sora",
+        lato: "lato",
       }
     },
   },
