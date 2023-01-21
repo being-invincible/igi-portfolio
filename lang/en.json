@@ -37,6 +37,11 @@
         "mail_des": "Drop us a mail!",
         "send_button": "Send Enquiry",
         "call": "Reach us via call -",
-        "landmark": "Our Landmark -"
+        "landmark": "Our Landmark -",
+        "form_name": "Name",
+        "form_email": "Email Address",
+        "form_phone_number": "Phone Number",
+        "form_subject": "Enquire about products / Write reviews",
+        "form_message": "Type the detailed description of your message here..."
     }
 }

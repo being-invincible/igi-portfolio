@@ -5,26 +5,37 @@ import { useState } from 'react';
 import Input from './input.tsx';
 import Textarea from './textarea';
 import { useForm } from 'react-hook-form';
+import { ErrorMessage } from '@hookform/error-message';
+import axios from 'axios';
+import Router from 'next/router';
 
-function Contact({contact, contact_des, mail_des, send_button, call, landmark}) {
+function Contact({contact, contact_des, mail_des, send_button, call, landmark, form_name, form_email, form_phone_number, form_subject, form_message}) {
   const [navbar, setNavbar] = useState(false);
-  const {register, handleSubmit, errors, reset} = useForm()
+  const {register,formState:{errors}, handleSubmit, reset} = useForm()
 
-  async function onFormSubmit(e) {
-    e.preventDefault();
-    const formData = {}
-    Array.from(e.currentTarget.elements).forEach(field =>
-      {
-        if (!field.name) return;
-        formData[field.name] = field.value;
+  async function onSubmitForm(values) {
+    let config = {
+      method: 'post',
+      url: `${process.env.NEXT_PUBLIC_API_URL}/api/contact`,
+      header: {
+        'Content-Type': 'application/json',
+      },
+      data: values,
+    };
 
-      });
-
-      fetch('/api/mail',{
-        method: 'post',
-        body: JSON.stringify(formData)
-      })
-      console.log(formData)
+    try {
+      const response = await axios(config)
+      if (response.status == 200) {
+        console.log('Sucess')
+        reset()
+        Router.push("/")
+      }
+      console.log(response)
+    }
+    catch(err){
+      console.error(err)
+    }
+    
   }
   return (
     <div>
@@ -99,22 +110,65 @@ function Contact({contact, contact_des, mail_des, send_button, call, landmark}) 
           </div>
       </div>
 
-      <div class="bg-gradient-to-tl from-mountain-pink to-rhythm p-8 shadow-lg lg:col-span-3 lg:p-12">
-        <h4 class="mb-5 text-2xl font-sora font-bold text-cultured md:text-3xl">
+      <div className="bg-gradient-to-tl from-mountain-pink to-rhythm p-8 shadow-lg lg:col-span-3 lg:p-12">
+        <h4 className="mb-5 text-2xl font-sora font-bold text-cultured md:text-3xl">
           {mail_des}
         </h4>
-        <form onSubmit={handleSubmit(onFormSubmit)} class="space-y-4">
-          <Input  id="name" name="name" label="Name" type="text" placeholder="Name"/>
+        <form onSubmit={handleSubmit(onSubmitForm)} className="space-y-4">
+          <div>
+            <label className='sr-only'>Name</label>
+            <input type="text" name='name' placeholder={form_name}
+              {...register('name')
+            }
+              className="w-full rounded-lg bg bg-cultured border-platinum p-3 text-sm"
+            />
+          </div>
+          {/*<span>{errors?.name?.message}</span>*/}
+          
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div>
+              <label className='sr-only'>Email</label>
+              <input type="text" name='email' placeholder={form_email}
+                {...register('email')}
+                className="w-full rounded-lg bg bg-cultured border-platinum p-3 text-sm"
+              />
+            </div>
+            <div>
+              <label className='sr-only'>Phone Number</label>
+              <input type="text" name='phone' placeholder={form_phone_number}
+                {...register('phone')}
+                className="w-full rounded-lg bg bg-cultured border-platinum p-3 text-sm"
+              />
+            </div>
+          </div>
+          <div>
+            <label className='sr-only'>Subject</label>
+            <input type="text" name='subject' placeholder={form_subject}
+              {...register('subject')}
+              className="w-full rounded-lg bg bg-cultured border-platinum p-3 text-sm"
+            />
+          </div>
+          <div>
+            <label className='sr-only'>Message</label>
+            <textarea
+              rows='6'
+              name='message' 
+              placeholder={form_message} 
+              {...register('message')}
+              className="w-full rounded-lg bg-cultured border-platinum p-3 text-sm"
+             />
+          </div>
+          {/*<Input  id="name" name="name" label="Name" type="text" placeholder="Name" ref={register}/>
 
           <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <Input  id="email" name="email" label="Email" type="text" placeholder="Email Address"/>
-          <Input  id="phone" name="phone" label="Phone" type="text" placeholder="Phone Number"/>
+          <Input  id="email" name="email" label="Email" type="text" placeholder="Email Address" ref={register}/>
+          <Input  id="phone" name="phone" label="Phone" type="text" placeholder="Phone Number" ref={register}/>
           </div>
 
-          <Input  id="subject" name="subject" label="Subject" type="text" placeholder="Enquire Products / Write reivews!"/>
+          <Input  id="subject" name="subject" label="Subject" type="text" placeholder="Enquire Products / Write reivews!" ref={register}/>
 
-          <Textarea id="message" name="message" label="Message" rows="6" placeholder="Type the detailed description of your message here..." />
-          
+          <Textarea id="message" name="message" label="Message" rows="6" placeholder="Type the detailed description of your message here..." ref={register}/>
+          */}
 
           <div>
             <button

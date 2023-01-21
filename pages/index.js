@@ -39,7 +39,7 @@ export default function Home() {
       p5={t("p5")} p5_des={t("p5_des")}
       p6={t("p6")} p6_des={t("p6_des")}
       />
-      <Contact contact={t("contact")} contact_des={t("contact_des")} mail_des={t("mail_des")} send_button={t("send_button")} call={t("call")} landmark={t("landmark")} />
+      <Contact contact={t("contact")} contact_des={t("contact_des")} mail_des={t("mail_des")} send_button={t("send_button")} call={t("call")} landmark={t("landmark")} form_name={t("form_name")} form_email={t("form_email")} form_phone_number={t("form_phone_number")} form_subject={t("form_subject")} form_message={t("form_message")} />
 
       <footer id="#Footer"class=" p-4 bg-platinum sm:p-6 dark:bg-gray-800">
           <div class="mx-8 mb-0 max-h-screen max-w-screen-xl">
