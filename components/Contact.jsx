@@ -66,7 +66,7 @@ function Contact({contact, contact_des, mail_des, send_button, call, landmark}) 
           </a>
           
           <a
-            class="ml-5 inline-block rounded-full bg-platinum p-[2px] hover:bg-crayola focus:outline-none focus:ring transition-all"
+            class="ml-0 lg:ml-5 inline-block rounded-full bg-platinum p-[2px] hover:bg-crayola focus:outline-none focus:ring transition-all"
             href="tel:+966595278489"
           >
             <span
