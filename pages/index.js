@@ -26,11 +26,11 @@ export default function Home() {
       </Head>
       <main className=''>
       
-      <NavBar />
+      <NavBar home={t("home")} aboutUs={t("aboutUs")} products={t("products")} contacts={t("contacts")} />
       
       <Hero slogan={t("slogan")} button01={t("hero_button01")} button02={t("hero_button02")} company={t("company")} />
       <About title={t("about")} para01={t("about_para01")} para02={t("about_para02")} button01={t("about_button")} />
-      <Features title={t("feature_title")} subtitle={t("feature_subtitle")} para01={t("feature_para01")} feature01={t("feature_point01")} feature02={t("feature_point02")} feature03={t("feature_point03")} tag={t("tag")} msg={t("msg")} />
+      <Features title={t("feature_title")} subtitle01={t("feature_subtitle01")} para01={t("feature_para01")} subtitle02={t("feature_subtitle02")} para02={t("feature_para02")} feature01={t("feature_point01")} feature02={t("feature_point02")} feature03={t("feature_point03")} tag={t("tag")} msg={t("msg")} />
       <Products product={t("product")} product_para={t("product_para")} sizes={t("sizes")} note={t("note")} 
       p1={t("p1")} p1_des={t("p1_des")}
       p2={t("p2")} p2_des={t("p2_des")}

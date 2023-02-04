@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Lang from './langSwitch';
 
-function NavBar() {
+function NavBar({ home, aboutUs, products, contacts }) {
   const [navbar, setNavbar] = useState(false);
   return (
     <div>
@@ -57,22 +57,22 @@ function NavBar() {
               
                 <li className="text-lg font-sora font-medium text-platinum py-5 px-6 text-center transition-colors border-b-2 md:border-b-0  hover:bg-rhythm hover:text-crayola border-x-mountain-pink  md:hover:text-crayola md:hover:bg-transparent">
                   <Link href="#home" onClick={() => setNavbar(!navbar)}>
-                    Home
+                    {home}
                   </Link>
                 </li>
                 <li className="text-lg font-sora font-medium text-platinum py-5 px-6 text-center transition-colors border-b-2 md:border-b-0  hover:bg-rhythm hover:text-crayola border-x-mountain-pink  md:hover:text-crayola md:hover:bg-transparent">
                   <Link href="#about" onClick={() => setNavbar(!navbar)}>
-                    About
+                    {aboutUs}
                   </Link>
                 </li>
                 <li className=" text-lg font-sora font-medium text-platinum py-5 px-6 text-center transition-colors border-b-2 md:border-b-0  hover:bg-rhythm hover:text-crayola border-x-mountain-pink  md:hover:text-crayola md:hover:bg-transparent">
                   <Link href="#product" onClick={() => setNavbar(!navbar)}>
-                    Products
+                    {products}
                   </Link>
                 </li>
                 <li className=" text-lg font-sora font-medium text-platinum py-5 px-6 text-center transition-colors border-b-2 md:border-b-0  hover:bg-rhythm hover:text-crayola border-x-mountain-pink  md:hover:text-crayola md:hover:bg-transparent">
                   <Link href="#contact" onClick={() => setNavbar(!navbar)}>
-                    Contact
+                    {contacts}
                   </Link>
                 </li>
               </ul>

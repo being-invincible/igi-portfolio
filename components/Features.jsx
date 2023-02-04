@@ -2,21 +2,25 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
-function Features({title, subtitle, para01, feature01, feature02, feature03, tag, msg }) {
+function Features({title, subtitle01, para01, subtitle02, para02, feature01, feature02, feature03, tag, msg }) {
   const [navbar, setNavbar] = useState(false);
   return (
     <div id='Features' class="bg-platinum pt-36 pb-10 sm:py-32 lg:pt-36 px-10">
       <div class="rounded-lg mx-auto max-w-7xl p-8 lg:px-20 bg-oxford-blue">
         <div class="sm:text-center">
           <h2 class="text-lg font-semibold leading-8 text-platinum">{title}</h2>
-          <p class="mt-2 text-3xl font-bold tracking-tight text-crayola sm:text-4xl">{subtitle}</p>
-          <p class="mt-4 text-justify text-md font-normal leading-8 text-platinum">
+          <p class="mt-2 text-lg font-bold tracking-tight text-crayola sm:text-2xl">{subtitle01}</p>
+          <p class="mt-4 text-center text-md font-normal leading-8 text-platinum">
           {para01}
+          </p>
+          <p class="mt-2 text-lg font-bold tracking-tight text-crayola sm:text-2xl">{subtitle02}</p>
+          <p class="mt-4 text-center text-md font-normal leading-8 text-platinum">
+          {para02}
           </p>
           
         </div>
         
-
+        {/* 
         <div class="mt-10 max-w-lg sm:mx-auto md:max-w-none">
         <div class="grid md:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-x-6 font-sora">
                   <div class="mb-6">
@@ -54,7 +58,7 @@ function Features({title, subtitle, para01, feature01, feature02, feature03, tag
                   
             </div>
 
-        </div>
+        </div>*/}
         
         </div>
         <div class=" text-center py-4 lg:px-4">

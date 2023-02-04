@@ -1,5 +1,9 @@
 {
     "home": {
+        "home": "Home",
+        "aboutUs": "About",
+        "products": "Product",
+        "contacts": "Contact",
         "company": "Imran Gulf Industries",
         "slogan": "Experience the luxury of premium quality with IGI. The trusted source for hotels and home utility linen made with world class fabrics",
         "hero_button01": "Our Products",
@@ -9,8 +13,10 @@
         "about_para02": "Our specialization in supplying hotel linens to the hospitality industry and luxury bed linens to discerning households reflects our commitment to meeting the highest standards of elegance, luxury, and beauty. Whether you are a hotelier looking to elevate your guests' experience, or a household with an eye for luxury and comfort, we have the perfect solutions for you.",
         "about_button": "Why IGI?",
         "feature_title": "What makes us special",
-        "feature_subtitle": "Factory Direct Sales",
-        "feature_para01": "Our company handles every aspect of the production process from sourcing raw materials to manufacturing and selling the final product. We do not use any intermediaries or middlemen, ensuring that our products are of the highest quality while still being offered at the most competitive prices.",
+        "feature_subtitle01": "Your Factory-Direct Source for Wholesale Textiles and Hotel Beddings in Bulk",
+        "feature_para01": "Imran Gulf Industries F. Co. is a hotel bedding supplier in Saudi Arabia for bed, bath and hotel hospitality needs. Supplying commercial quality products to the hospitality and healthcare industries with fast shipping to commercial business. Every order and customer request, large or small, is handled with timely offer and suggestion.",
+        "feature_subtitle02": "Hospitality Quality Bedding, Linens & Towels for Commercial Business",
+        "feature_para02": "Our products are ideal for Hotels, Lodges, Resort and Day Spas, Furniture Rental Companies, Healthcare Hospitality Homes, Nursing Homes, Camps, Colleges, Universities, Property Management Companies, and many other businesses that need commercial hospitality quality linens, beddings, towels, table linens, and accessories in bulk quantities at low wholesale prices. Whether you are a seasoned buyer searching for a new source or a hotel housekeeping manager looking for purchasing wholesale textiles for commercial use, we welcome and thank you for the opportunity to help you with your hospitality, healthcare, and textiles raw material supplies.",
         "feature_point01": "From Raw Materials",
         "feature_point02": "To Production",
         "feature_point03": "To Direct Sales!",
