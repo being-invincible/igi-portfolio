@@ -27,7 +27,7 @@ function Hero({slogan, button01, button02, company}) {
             </strong>
           </h1>
           <h6 className='font-semibold text-left'>Since 2005</h6>*/}
-          <div className='py-5 font-lato uppercase text-center tracking-[.25em] text-sm lg:text-2xl text-cultured bg-gradient-to-r from-goldenrod to-crayola'>{company}</div>
+          <div className='py-5 font-lato uppercase text-center tracking-[.25em] text-sm lg:text-xl text-cultured bg-gradient-to-r from-goldenrod to-crayola'>{company}</div>
           {/*<Image src="Title.svg" alt="Company Title" width={500} height={500}/>*/}
           <p className="text-justify font-semibold text-oxford-blue mt-4 max-w-lg sm:text-xl sm:leading-relaxed">
           {slogan}
